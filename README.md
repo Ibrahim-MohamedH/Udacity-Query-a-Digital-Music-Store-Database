@@ -1,5 +1,5 @@
-# Udacity-Query-a-Digital-Music-Store-Database
-Project 1 of Udacity Data Analysis Advanced Nanodegree Program.
+# Udacity Query a Digital Music Store Database
+Project #1 of Udacity Data Analysis Advanced Nanodegree Program.
 
 ## Overview
 We will be using Chinook Database to assist the Chinook team to understand the media in their store.
