@@ -1,0 +1,16 @@
+/*Query 2 - Who Purchased The Most Rock Music Tracks?*/
+SELECT	Customer.FirstName, 
+		COUNT(Track.GenreId) AS Total_Rock_tracks
+FROM Customer
+JOIN Invoice
+ON Customer.CustomerId = Invoice.CustomerId
+JOIN InvoiceLine
+ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+JOIN Track
+ON InvoiceLine.TrackId = Track.TrackId
+WHERE Track.GenreId = (SELECT GenreId
+						From Genre 
+						Where Name = "Rock")
+Group By Customer.FirstName
+ORDER BY Total_Rock_tracks DESC
+LIMIT 10;

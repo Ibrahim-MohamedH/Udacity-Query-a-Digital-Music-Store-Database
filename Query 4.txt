@@ -1,0 +1,9 @@
+/*Query 4 - Which Cities Have The Highest Total Invoice?*/
+SELECT	Customer.City,
+		SUM(Invoice.Total) AS Total_invoice
+FROM Customer
+JOIN Invoice
+ON Customer.CustomerId = Invoice.CustomerId
+GROUP BY Customer.City
+ORDER BY Total_invoice DESC
+LIMIT 5;

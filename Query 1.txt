@@ -1,0 +1,11 @@
+/*Query 1 - What Is The Top 10 Selling Genres?*/
+SELECT	Genre.name As Genre,
+		SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity) As Total_usd
+FROM Genre
+JOIN Track
+ON Genre.GenreId = Track.GenreId
+JOIN InvoiceLine
+ON Track.TrackId = InvoiceLine.TrackId
+GROUP BY Genre
+ORDER BY Total_usd Desc
+LIMIT 10;
