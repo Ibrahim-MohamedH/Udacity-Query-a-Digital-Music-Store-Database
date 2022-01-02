@@ -5,7 +5,7 @@ Project #1 of Udacity Data Analysis Advanced Nanodegree Program.
 We will be using Chinook Database to assist the Chinook team to understand the media in their store.
 
 ## Softwares Used:
- - DB browser for SQLite (or any relevant SQL application)
+ - DB browser for [SQLite](https://sqlite.org/download.html)
 
 ## Supported Database Servers:
  - MySQL
